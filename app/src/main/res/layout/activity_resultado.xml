@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ResultadoActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Metros:"
+        android:id="@+id/textViewMetros"
+        android:layout_marginTop="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/TextView_resultMetros" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Quilomêtros:"
+        android:layout_marginTop="44dp"
+        android:id="@+id/textView"
+        android:layout_below="@+id/TextView_resultMetros"
+        android:layout_toStartOf="@+id/TextView_resultKM" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Milhas Náuticas:"
+        android:id="@+id/textViewMilhasNaut"
+        android:layout_marginTop="58dp"
+        android:layout_below="@+id/TextView_resultKM"
+        android:layout_toStartOf="@+id/TextView_resultMilhasNaut" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Milhas Terrestres:"
+        android:id="@+id/textViewMilhasTerres"
+        android:layout_below="@+id/textViewMilhasNaut"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="72dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TextView_resultMetros"
+        android:layout_alignTop="@+id/textViewMetros"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textViewMilhasTerres" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TextView_resultMilhasNaut"
+        android:layout_alignTop="@+id/textViewMilhasNaut"
+        android:layout_alignEnd="@+id/TextView_resultMetros"
+        android:layout_toEndOf="@+id/textViewMilhasTerres" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TextView_resultKM"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignStart="@+id/TextView_resultMetros"
+        android:layout_alignEnd="@+id/TextView_resultMetros" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TextView_resultMilhasTerres"
+        android:layout_alignTop="@+id/textViewMilhasTerres"
+        android:layout_alignEnd="@+id/TextView_resultMilhasNaut"
+        android:layout_toEndOf="@+id/textViewMilhasTerres" />
+</RelativeLayout>
